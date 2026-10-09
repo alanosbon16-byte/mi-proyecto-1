@@ -1,7 +1,7 @@
 function Navbar() {
     return (
         <nav>
-            <h2>Mi Logo</h2>
+        <h2>Mi Logo</h2>
             <ul>
 
                 <li>Inicio</li> 

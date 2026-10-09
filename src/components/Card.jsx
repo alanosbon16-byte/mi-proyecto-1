@@ -1,15 +1,19 @@
-function Card() {
-    function manejarClick(){
-        alerta("Hola, este mensaje por defecto")        
-    }
+import { useState } from "react";
+function Card({nombre, describsion, boton, mensaje}) {
+    const [mostrar, setMostrar] = useState(false);
+      
+
     return (
-        <div>
-            <h3>Titulo de algo</h3>
-            <p>Aqui su decripcion</p>
-            <button onClick={manejarClick}>ver mas</button>
-        </div>
-        
+        <article>
+            <h3>{nombre}</h3>
+            <p>{describsion}</p>
+            {mostrar && 
+            <p>{mensaje}</p>}
+            <button onClick={() => setMostrar(!mostrar)}>{mostrar ? 'ver menos' : 'ver mas'}</button>
+
+        </article>
+    
     )
 }
 
-export default Card
+export default Card;
